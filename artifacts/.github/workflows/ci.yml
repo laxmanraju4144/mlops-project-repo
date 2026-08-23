@@ -2,11 +2,9 @@ name: CI - Tain and save the model
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main]
   pull_request:
-    branches:
-      - main
+    branches: [ main]
 
 jobs:
   matrix-pip:
@@ -41,4 +39,3 @@ jobs:
         with:
           name: ml-artifacts-${{ matrix.python }}-${{ github.run_id }}
           path: artifacts
-          
